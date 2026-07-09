@@ -1,209 +1,287 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TULA Functional - Small Group Fitness</title>
+    <title>Tula Functional Lifestyles - Indiranagar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        tulaDark: '#111418',
-                        tulaAccent: '#C9FF22', // High-energy neon lime/yellow
-                        tulaMuted: '#A0AEC0'
+                        tulaDark: '#0A0C10',       // Deep premium sanctuary black
+                        tulaCard: '#12161A',       // Elevated surface dark gray
+                        tulaAccent: '#CCFF00',     // High-voltage neon lime accent
+                        tulaMuted: '#8A99AD'       // Sophisticated text gray
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-tulaDark text-white font-sans antialiased overflow-x-hidden">
+<body class="bg-tulaDark text-white font-sans antialiased overflow-x-hidden selection:bg-tulaAccent selection:text-black">
 
-    <header class="fixed top-0 left-0 w-full z-50 bg-tulaDark/80 backdrop-blur-md border-b border-white/10 px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-            <span class="text-2xl font-extrabold tracking-wider text-white">TULA<span class="text-tulaAccent">.</span></span>
-            <span class="text-xs uppercase tracking-widest text-tulaMuted hidden sm:inline-block border-l border-white/20 pl-2">Functional</span>
+    <header class="fixed top-0 left-0 w-full z-50 bg-tulaDark/70 backdrop-blur-xl border-b border-white/5 px-6 py-4 flex justify-between items-center transition-all duration-300">
+        <div class="flex items-center space-x-3">
+            <span class="text-2xl font-extrabold tracking-tighter uppercase text-white">TULA<span class="text-tulaAccent">.</span></span>
+            <span class="text-[10px] uppercase tracking-[0.25em] text-tulaMuted hidden sm:inline-block border-l border-white/10 pl-3">Functional Lifestyles</span>
         </div>
         
-        <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
-            <a href="#about" class="hover:text-tulaAccent transition-colors">Philosophy</a>
-            <a href="#classes" class="hover:text-tulaAccent transition-colors">The Sessions</a>
-            <a href="#schedule" class="hover:text-tulaAccent transition-colors">Schedule</a>
-            <a href="#pricing" class="hover:text-tulaAccent transition-colors">Membership</a>
+        <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-semibold">
+            <a href="#philosophy" class="text-tulaMuted hover:text-tulaAccent transition-colors">Philosophy</a>
+            <a href="#sanctuary" class="text-tulaMuted hover:text-tulaAccent transition-colors">The Sanctuary</a>
+            <a href="#offers" class="text-tulaMuted hover:text-tulaAccent transition-colors">Experiences</a>
         </nav>
 
         <div>
-            <a href="#book" class="bg-tulaAccent text-black font-semibold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full hover:bg-white transition-all shadow-lg shadow-tulaAccent/10">
-                Claim Free Session
+            <a href="#book" class="bg-tulaAccent text-black font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded hover:bg-white transition-all shadow-[0_0_20px_rgba(204,255,0,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                First Class Free
             </a>
         </div>
     </header>
 
     <section class="relative min-h-screen flex items-center justify-center pt-24 px-6 overflow-hidden">
-        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-tulaAccent/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-tulaAccent/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-        <div class="max-w-5xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase mb-6 text-tulaAccent animate-pulse">
-                <i data-lucide="users" class="w-4 h-4"></i>
-                <span>Strictly Capsized at 8 Members Per Session</span>
+        <div class="max-w-5xl mx-auto text-center relative z-10 mt-12">
+            <div class="inline-flex items-center space-x-2 bg-white/[0.03] border border-white/10 px-4 py-1.5 rounded mb-8 text-xs font-semibold tracking-widest uppercase text-tulaAccent">
+                <span class="w-1.5 h-1.5 rounded-full bg-tulaAccent animate-ping mr-1"></span>
+                <span>Intimate semi-private sessions &lt; 10 members</span>
             </div>
             
-            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-6 leading-tight uppercase">
-                Group Energy.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-tulaAccent to-white">Personal Focus.</span>
+            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-8 uppercase leading-[0.95]">
+                Optimize Your Lifecycle.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-tulaAccent via-emerald-400 to-white">Match Health Span to Lifespan.</span>
             </h1>
             
-            <p class="text-lg md:text-xl text-tulaMuted max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-                TULA redefines functional movement. High-end coaching explicitly engineered within a small-group dynamic to maximize strength, form, and longevity.
+            <p class="text-base md:text-lg text-tulaMuted max-w-2xl mx-auto mb-12 font-normal leading-relaxed tracking-wide">
+                We bridge the gap between wellness intentions and real, sustainable lifestyle changes. Tailored specifically for busy professionals who value personalized alignment, structural data tracking, and a supportive community.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#classes" class="w-full sm:w-auto bg-tulaAccent text-black font-bold uppercase tracking-wider px-8 py-4 rounded-md hover:scale-105 transition-transform flex items-center justify-center space-x-2">
-                    <span>Explore Sessions</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                <a href="#offers" class="w-full sm:w-auto bg-tulaAccent text-black font-extrabold uppercase tracking-widest text-xs px-8 py-4 rounded hover:scale-[1.02] transition-all flex items-center justify-center space-x-2">
+                    <span>View Trial Experiences</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 stroke-[3]"></i>
                 </a>
-                <a href="#about" class="w-full sm:w-auto bg-white/5 border border-white/10 font-bold uppercase tracking-wider px-8 py-4 rounded-md hover:bg-white/10 transition-colors flex items-center justify-center space-x-2">
-                    <span>Our Philosophy</span>
+                <a href="#sanctuary" class="w-full sm:w-auto bg-white/[0.02] border border-white/10 font-extrabold uppercase tracking-widest text-xs px-8 py-4 rounded hover:bg-white/5 hover:border-white/20 transition-all">
+                    <span>Explore Indiranagar Collective</span>
                 </a>
             </div>
         </div>
 
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40">
-            <span class="text-xs tracking-widest uppercase mb-2">Scroll</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce"></i>
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+            <svg class="relative block w-full h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" preserveAspectRatio="none">
+                <path d="M1200 1200L0 0v1200z" class="fill-tulaCard"></path>
+            </svg>
         </div>
     </section>
 
-    <section class="border-y border-white/10 bg-white/[0.02] py-12 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <div class="text-3xl md:text-4xl font-extrabold text-tulaAccent mb-1">8 Max</div>
-                <div class="text-xs uppercase tracking-widest text-tulaMuted">Members Per Coach</div>
+    <section id="philosophy" class="bg-tulaCard py-20 px-6 border-b border-white/5 relative z-20">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-tulaAccent uppercase text-xs font-bold tracking-[0.2em] block mb-3">// WHAT WE ARE NOT</span>
+                <p class="text-lg text-white font-medium italic">
+                    "We are not a mass-market, overcrowded strongman gym with impersonal training. We do not chase quick fixes or temporary summer bodies. We are a sanctuary for holistic self-improvement."
+                </p>
             </div>
-            <div>
-                <div class="text-3xl md:text-4xl font-extrabold text-white mb-1">35+</div>
-                <div class="text-xs uppercase tracking-widest text-tulaMuted">Weekly Sessions</div>
-            </div>
-            <div>
-                <div class="text-3xl md:text-4xl font-extrabold text-white mb-1">100%</div>
-                <div class="text-xs uppercase tracking-widest text-tulaMuted">Form-Focused</div>
-            </div>
-            <div>
-                <div class="text-3xl md:text-4xl font-extrabold text-tulaAccent mb-1">Expert</div>
-                <div class="text-xs uppercase tracking-widest text-tulaMuted">Physio-Led Design</div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center border-t border-white/5 pt-12">
+                <div>
+                    <div class="text-4xl md:text-5xl font-extrabold text-tulaAccent tracking-tight mb-2">35-55</div>
+                    <div class="text-[10px] uppercase tracking-widest font-bold text-tulaMuted">Target Age Demographics</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-2">Tech Led</div>
+                    <div class="text-[10px] uppercase tracking-widest font-bold text-tulaMuted">Progress Tracking Tools</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-2">Pain-Free</div>
+                    <div class="text-[10px] uppercase tracking-widest font-bold text-tulaMuted">Flexibility & Longevity Focus</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-extrabold text-tulaAccent tracking-tight mb-2">100%</div>
+                    <div class="text-[10px] uppercase tracking-widest font-bold text-tulaMuted">Sustainable Accountability</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="classes" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+    <section id="sanctuary" class="py-28 px-6 max-w-7xl mx-auto relative">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-20">
             <div>
-                <span class="text-tulaAccent uppercase text-xs font-bold tracking-widest block mb-3">// THE PROGRAMMING</span>
-                <h2 class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight">Engineered To Perform</h2>
+                <span class="text-tulaAccent uppercase text-xs font-bold tracking-[0.2em] block mb-4">// CORE COMPASS</span>
+                <h2 class="text-4xl md:text-6xl font-extrabold uppercase tracking-tighter">Why Choose Tula</h2>
             </div>
-            <p class="text-tulaMuted max-w-md mt-4 md:mt-0 font-light">
-                Every class is strategically balanced throughout the week to ensure comprehensive functional adaptation without burnout.
+            <p class="text-tulaMuted max-w-md mt-6 md:mt-0 font-normal text-sm leading-relaxed tracking-wide">
+                We function as wellness psychologists and motion specialists, creating an inclusive, non-intimidating environment you look forward to visiting.
             </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white/[0.03] border border-white/10 rounded-xl p-8 hover:border-tulaAccent/30 transition-all group flex flex-col justify-between min-h-[380px]">
+            <div class="bg-tulaCard border border-white/5 rounded-lg p-8 hover:border-tulaAccent/30 transition-all duration-300 group flex flex-col justify-between min-h-[320px]">
                 <div>
-                    <div class="w-12 h-12 rounded-lg bg-tulaAccent/10 flex items-center justify-center text-tulaAccent mb-6 group-hover:bg-tulaAccent group-hover:text-black transition-colors">
-                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    <div class="w-12 h-12 rounded bg-tulaAccent/5 flex items-center justify-center text-tulaAccent mb-8 group-hover:bg-tulaAccent group-hover:text-black transition-all duration-300">
+                        <i data-lucide="shield" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-2xl font-bold uppercase mb-3">TULA Capacity</h3>
+                    <h3 class="text-2xl font-bold uppercase tracking-tight mb-3">Preventive Care</h3>
                     <p class="text-tulaMuted text-sm font-light leading-relaxed">
-                        High-threshold aerobic conditioning mixed with functional carries and pacing work. Designed to expand your engine.
+                        Prioritizing proactive health, structural alignment, and movement diagnostics to ensure a completely pain-free journey as you age.
                     </p>
                 </div>
-                <div class="pt-6 border-t border-white/5 flex justify-between items-center text-xs tracking-wider uppercase text-tulaMuted">
-                    <span>Duration: 50 Mins</span>
-                    <span class="text-white font-semibold">Conditioning</span>
+                <div class="pt-6 border-t border-white/5 flex items-center text-[10px] tracking-widest uppercase font-bold text-tulaAccent">
+                    <span>Holistic Foundation</span>
                 </div>
             </div>
 
-            <div class="bg-white/[0.03] border border-white/10 rounded-xl p-8 hover:border-tulaAccent/30 transition-all group flex flex-col justify-between min-h-[380px]">
+            <div class="bg-tulaCard border border-white/5 rounded-lg p-8 hover:border-tulaAccent/30 transition-all duration-300 group flex flex-col justify-between min-h-[320px]">
                 <div>
-                    <div class="w-12 h-12 rounded-lg bg-tulaAccent/10 flex items-center justify-center text-tulaAccent mb-6 group-hover:bg-tulaAccent group-hover:text-black transition-colors">
-                        <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                    <div class="w-12 h-12 rounded bg-tulaAccent/5 flex items-center justify-center text-tulaAccent mb-8 group-hover:bg-tulaAccent group-hover:text-black transition-all duration-300">
+                        <i data-lucide="compass" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-2xl font-bold uppercase mb-3">TULA Build</h3>
+                    <h3 class="text-2xl font-bold uppercase tracking-tight mb-3">Intimate Setting</h3>
                     <p class="text-tulaMuted text-sm font-light leading-relaxed">
-                        Progressive resistance training focused on structural balance, raw strength, and pristine movement mechanics. 
+                        Our semi-private configurations ensure highly individualized attention. Say goodbye to fighting crowds or dealing with generalized routines.
                     </p>
                 </div>
-                <div class="pt-6 border-t border-white/5 flex justify-between items-center text-xs tracking-wider uppercase text-tulaMuted">
-                    <span>Duration: 55 Mins</span>
-                    <span class="text-white font-semibold">Pure Strength</span>
+                <div class="pt-6 border-t border-white/5 flex items-center text-[10px] tracking-widest uppercase font-bold text-white">
+                    <span>Semi-Private Focus</span>
                 </div>
             </div>
 
-            <div class="bg-white/[0.03] border border-white/10 rounded-xl p-8 hover:border-tulaAccent/30 transition-all group flex flex-col justify-between min-h-[380px]">
+            <div class="bg-tulaCard border border-white/5 rounded-lg p-8 hover:border-tulaAccent/30 transition-all duration-300 group flex flex-col justify-between min-h-[320px]">
                 <div>
-                    <div class="w-12 h-12 rounded-lg bg-tulaAccent/10 flex items-center justify-center text-tulaAccent mb-6 group-hover:bg-tulaAccent group-hover:text-black transition-colors">
-                        <i data-lucide="shield" class="w-6 h-6"></i>
+                    <div class="w-12 h-12 rounded bg-tulaAccent/5 flex items-center justify-center text-tulaAccent mb-8 group-hover:bg-tulaAccent group-hover:text-black transition-all duration-300">
+                        <i data-lucide="heart-handshake" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-2xl font-bold uppercase mb-3">TULA Resilient</h3>
+                    <h3 class="text-2xl font-bold uppercase tracking-tight mb-3">Shared Accountability</h3>
                     <p class="text-tulaMuted text-sm font-light leading-relaxed">
-                        Joint longevity, multi-planar core stability, and mobility anchors. The ultimate preventative maintenance session.
+                        A team of passionate, hyper-qualified professionals tracking your milestones weekly. We build social connections that anchor long-term motivation.
                     </p>
                 </div>
-                <div class="pt-6 border-t border-white/5 flex justify-between items-center text-xs tracking-wider uppercase text-tulaMuted">
-                    <span>Duration: 45 Mins</span>
-                    <span class="text-white font-semibold">Mobility & Core</span>
+                <div class="pt-6 border-t border-white/5 flex items-center text-[10px] tracking-widest uppercase font-bold text-tulaMuted">
+                    <span>Community First</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="book" class="py-20 px-6 bg-gradient-to-b from-tulaDark to-black border-t border-white/5">
-        <div class="max-w-4xl mx-auto bg-white/[0.02] border border-white/10 rounded-2xl p-8 md:p-12 relative overflow-hidden">
-            <div class="absolute -top-24 -right-24 w-48 h-48 bg-tulaAccent/10 rounded-full blur-2xl"></div>
+    <section id="offers" class="py-24 bg-tulaCard/30 border-y border-white/5 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-tulaAccent uppercase text-xs font-bold tracking-[0.2em] block mb-3">// INTRODUCTORY EXPERIENCES</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold uppercase tracking-tighter">Begin Your Adaptation</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-tulaDark border border-white/10 rounded-xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="text-tulaAccent text-xs uppercase font-bold tracking-widest mb-2">Evaluation Single Session</div>
+                        <h4 class="text-2xl font-extrabold uppercase mb-4">First Session Experience</h4>
+                        <p class="text-tulaMuted text-sm font-light leading-relaxed mb-6">
+                            Immerse yourself into our custom dynamic environment with a zero-cost initial evaluation, baseline structural analysis, and posture metric test.
+                        </p>
+                    </div>
+                    <div class="text-xl font-bold text-white border-t border-white/5 pt-4 flex justify-between items-center">
+                        <span>Free Assessment</span>
+                        <a href="#book" class="text-xs uppercase tracking-wider font-bold bg-white text-black px-4 py-2 rounded hover:bg-tulaAccent transition-colors">Claim Spot</a>
+                    </div>
+                </div>
+
+                <div class="bg-tulaDark border border-white/10 rounded-xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="text-tulaAccent text-xs uppercase font-bold tracking-widest mb-2">Deep Habit Accclimation</div>
+                        <h4 class="text-2xl font-extrabold uppercase mb-4">One Week Experience</h4>
+                        <p class="text-tulaMuted text-sm font-light leading-relaxed mb-6">
+                            Unlimited access for 7 consecutive days. We recommend booking up to 4 personalized sessions to truly understand the rhythm of structural coaching.
+                        </p>
+                    </div>
+                    <div class="text-xl font-bold text-white border-t border-white/5 pt-4 flex justify-between items-center">
+                        <span>Curated Pricing</span>
+                        <a href="#book" class="text-xs uppercase tracking-wider font-bold bg-tulaAccent text-black px-4 py-2 rounded hover:bg-white transition-colors">Inquire Rate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="relative py-28 px-6 bg-gradient-to-b from-tulaCard to-tulaDark border-t border-white/5">
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] transform rotate-180">
+            <svg class="relative block w-full h-[40px]" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" preserveAspectRatio="none">
+                <path d="M1200 1200L0 0v1200z" class="fill-tulaDark"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto bg-tulaDark/60 border border-white/10 rounded-xl p-8 md:p-14 relative overflow-hidden backdrop-blur-md shadow-2xl">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-tulaAccent/5 rounded-full blur-[80px] pointer-events-none"></div>
             
             <div class="max-w-xl">
-                <span class="text-tulaAccent uppercase text-xs font-bold tracking-widest block mb-2">First Session On Us</span>
-                <h3 class="text-3xl md:text-4xl font-extrabold uppercase mb-4">Experience the Small Group Advantage</h3>
-                <p class="text-tulaMuted mb-8 font-light text-sm md:text-base">
-                    Drop your details below. One of our head coaches will reach out within 12 hours to discuss your targets and align your first session.
+                <span class="text-tulaAccent uppercase text-xs font-bold tracking-[0.2em] block mb-3">// KINETIC DISCOVERY</span>
+                <h3 class="text-3xl md:text-5xl font-extrabold uppercase tracking-tighter mb-4">Schedule Your Consultation</h3>
+                <p class="text-tulaMuted mb-10 font-normal text-sm md:text-base leading-relaxed tracking-wide">
+                    Begin a long-term transformation that protects your well-being. Share your timeline, and our onboarding team will coordinate your lifestyle alignment overview.
                 </p>
 
-                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Welcome to the collective! We will contact you shortly.');">
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Assessment requested. Welcome to Tula Functional Lifestyles.');">
                     <div class="grid sm:grid-cols-2 gap-4">
-                        <input type="text" placeholder="First Name" required class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-sm focus:outline-none focus:border-tulaAccent transition-colors">
-                        <input type="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-sm focus:outline-none focus:border-tulaAccent transition-colors">
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest font-bold text-tulaMuted mb-2">Full Name</label>
+                            <input type="text" placeholder="Your Name" required class="w-full bg-tulaCard/80 border border-white/10 rounded px-4 py-3.5 text-sm text-white focus:outline-none focus:border-tulaAccent focus:ring-1 focus:ring-tulaAccent transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest font-bold text-tulaMuted mb-2">Email Address</label>
+                            <input type="email" placeholder="name@domain.com" required class="w-full bg-tulaCard/80 border border-white/10 rounded px-4 py-3.5 text-sm text-white focus:outline-none focus:border-tulaAccent focus:ring-1 focus:ring-tulaAccent transition-all">
+                        </div>
                     </div>
-                    <button type="submit" class="w-full bg-white text-black font-bold uppercase tracking-wider text-xs py-4 rounded hover:bg-tulaAccent transition-colors">
-                        Request Your Spot
-                    </button>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest font-bold text-tulaMuted mb-2">Primary Wellness Target</label>
+                        <select class="w-full bg-tulaCard/80 border border-white/10 rounded px-4 py-3.5 text-sm text-tulaMuted focus:outline-none focus:border-tulaAccent focus:text-white transition-all appearance-none">
+                            <option>Empower a pain-free, healthy lifestyle as I age</option>
+                            <option>Sustainable weight loss & lifestyle tracking</option>
+                            <option>Improve structural flexibility, balance & core strength</option>
+                        </select>
+                    </div>
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-tulaAccent text-black font-extrabold uppercase tracking-widest text-xs py-4 rounded hover:bg-white transition-colors duration-200 shadow-[0_4px_20px_rgba(204,255,0,0.1)]">
+                            Request My Free Session
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="border-t border-white/10 py-12 px-6 text-center text-xs text-tulaMuted tracking-wider">
+    <footer class="border-t border-white/5 py-12 px-6 text-xs text-tulaMuted tracking-widest font-medium">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div class="font-bold text-white tracking-widest uppercase">TULA FUNCTIONAL © 2026</div>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-white transition-colors">Privacy</a>
-                <a href="#" class="hover:text-white transition-colors">Terms</a>
-                <a href="#" class="hover:text-white transition-colors">Instagram</a>
+            <div class="text-white font-bold uppercase text-[10px] tracking-[0.25em]">
+                TULA FUNCTIONAL LIFESTYLES <span class="text-tulaMuted font-light">| Indiranagar</span>
+            </div>
+            <div class="flex space-x-8 uppercase text-[10px]">
+                <a href="#" class="hover:text-tulaAccent transition-colors">Privacy Charter</a>
+                <a href="#" class="hover:text-tulaAccent transition-colors">Terms of Wellness</a>
+                <a href="https://drive.google.com/drive/folders/1LOTk8HhuFba5_V24xo-_QABC4xavdi3D" class="hover:text-tulaAccent transition-colors" target="_blank">Studio Repository</a>
             </div>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
+        
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-tulaDark/95', 'py-3');
+                header.classList.remove('bg-tulaDark/70', 'py-4');
+            } else {
+                header.classList.add('bg-tulaDark/70', 'py-4');
+                header.classList.remove('bg-tulaDark/95', 'py-3');
+            }
+        });
     </script>
 </body>
 </html>
-
-```
